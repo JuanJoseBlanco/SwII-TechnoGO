@@ -1,0 +1,26 @@
+{
+  "name": "swii-technogo",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "MERN Ecommerce App",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanJoseBlanco/SwII-TechnoGO.git"
+  },
+  "author": "SWII-Group",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JuanJoseBlanco/SwII-TechnoGO/issues"
+  },
+  "homepage": "https://github.com/JuanJoseBlanco/SwII-TechnoGO#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
