@@ -11,7 +11,7 @@ app.get('/', (req, res) =>{
     res.send('Servidor corriendo')
 })
 
-const port = process.env.port || 8080;
+const port = process.env.port || 5000;
 
 app.listen(port, ()=>{
     console.log(`Serve at http://localhost:${port}`)

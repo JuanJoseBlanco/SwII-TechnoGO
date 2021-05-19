@@ -19,7 +19,7 @@ function App() {
           </div>
         </header>
         <main>
-          <Route path="/product/:id" component ={ProductScreen}></Route>
+          <Route path="/product/:id" component={ProductScreen}></Route>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center">Derechos reservados. 2021</footer>
