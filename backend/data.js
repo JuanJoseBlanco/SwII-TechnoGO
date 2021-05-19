@@ -1,7 +1,22 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+  users: [
+    {
+      name: 'Juan', 
+      email: 'admin@example.com', 
+      password: bcrypt.hashSync('1234', 8),
+      isAdmin: true,
+    },
+    {
+      name: 'Diego', 
+      email: 'diego@example.com', 
+      password: bcrypt.hashSync('1234', 8),
+      isAdmin: false,
+    }
+  ],
   products: [
     {
-      _id: "1",
       name: "Case para PC",
       category: "Case",
       image: "/images/p1.jpg",
@@ -13,7 +28,6 @@ const data = {
       description: "Un case melardo",
     },
     {
-      _id: "2",
       name: "Mouse Logitech",
       category: "Mice",
       image: "/images/p2.jpg",
@@ -25,7 +39,6 @@ const data = {
       description: "Un mouse melardo",
     },
     {
-      _id: "3",
       name: "Teclado Redragon",
       category: "Keyboard",
       image: "/images/p3.jpg",
@@ -37,7 +50,6 @@ const data = {
       description: "Un teclado melardo",
     },
     {
-      _id: "4",
       name: "Headset Cooler Master",
       category: "Headset",
       image: "/images/p4.jpg",
@@ -49,7 +61,6 @@ const data = {
       description: "Un headset melardo",
     },
     {
-      _id: "5",
       name: "Procesador Ryzen 5",
       category: "Proccess",
       image: "/images/p5.jpg",
@@ -61,7 +72,6 @@ const data = {
       description: "Un procesador melardo",
     },
     {
-      _id: "6",
       name: "Monitor Asus 24inch",
       category: "Monitors",
       image: "/images/p6.jpg",
