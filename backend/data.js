@@ -1,25 +1,25 @@
-import bcrypt from 'bcryptjs';
+import bcrypt from "bcryptjs";
 
 const data = {
   users: [
     {
-      name: 'Juan', 
-      email: 'admin@example.com', 
-      password: bcrypt.hashSync('1234', 8),
+      name: "Juan",
+      email: "admin@example.com",
+      password: bcrypt.hashSync("1234", 8),
       isAdmin: true,
     },
     {
-      name: 'Admin', 
-      email: 'administrador@example.com', 
-      password: bcrypt.hashSync('root', 8),
+      name: "Admin",
+      email: "administrador@example.com",
+      password: bcrypt.hashSync("root", 8),
       isAdmin: true,
     },
     {
-      name: 'Diego', 
-      email: 'diego@example.com', 
-      password: bcrypt.hashSync('1234', 8),
+      name: "Diego",
+      email: "diego@example.com",
+      password: bcrypt.hashSync("1234", 8),
       isAdmin: false,
-    }
+    },
   ],
   products: [
     {
@@ -31,7 +31,8 @@ const data = {
       brand: "Cooler Master",
       rating: 4.5,
       numReviews: 10,
-      description: "Un case melardo",
+      description:
+        "Chasis Cooler Master con USB 3.0 y 2.0 Sin fuente de poder.",
     },
     {
       name: "Mouse Logitech",
@@ -42,7 +43,7 @@ const data = {
       brand: "Logitech",
       rating: 5,
       numReviews: 4,
-      description: "Un mouse melardo",
+      description: "Mouse inalambrico recargable Logitech MX Master 3",
     },
     {
       name: "Teclado Redragon",
@@ -53,7 +54,7 @@ const data = {
       brand: "Redragon",
       rating: 4.5,
       numReviews: 10,
-      description: "Un teclado melardo",
+      description: "Teclado Mecanico RGB Red Switch",
     },
     {
       name: "Headset Cooler Master",
@@ -64,7 +65,7 @@ const data = {
       brand: "Cooler Master",
       rating: 4.5,
       numReviews: 10,
-      description: "Un headset melardo",
+      description: "Headset alambrico para PC, XBOX o PS4. Implementación 7.1",
     },
     {
       name: "Procesador Ryzen 5",
@@ -75,7 +76,8 @@ const data = {
       brand: "Ryzen",
       rating: 4.5,
       numReviews: 10,
-      description: "Un procesador melardo",
+      description:
+        "Procesador con tarjeta gráfica integrada. 4 núcelos y 3.7 GHz",
     },
     {
       name: "Monitor Asus 24inch",
@@ -86,7 +88,7 @@ const data = {
       brand: "Asus",
       rating: 4.5,
       numReviews: 10,
-      description: "Un monitor melardo",
+      description: `Monitor Gamer 24". Frecuencia de 144Hz y tasa de refresco de 1ms`,
     },
   ],
 };
