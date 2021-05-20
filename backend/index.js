@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
   res.send("Servidor corriendo.");
 });
 
-app.use((err, req, res) => {
+app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
 
