@@ -17,6 +17,7 @@ import ProfileScreen from "./screens/ProfileScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import ShippingAddressScreen from "./screens/ShippingAddressScreen";
 import SignInScreen from "./screens/SignInScreen";
+import ProductEditScreen from "./screens/ProductEditScreen";
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -70,7 +71,20 @@ function App() {
                 <Link to="#admin">
                   Admin <i className="fa fa-caret-down"></i>
                 </Link>
-                <ul className="dropdwon-content"></ul>
+                <ul className="dropdown-content">
+                  <li>
+                    <Link to="/dashboard">Dashboard</Link>
+                  </li>
+                  <li>
+                    <Link to="/productlist">Productos</Link>
+                  </li>
+                  <li>
+                    <Link to="/orderlist">Ordenes</Link>
+                  </li>
+                  <li>
+                    <Link to="/userlist">Usuarios</Link>
+                  </li>
+                </ul>
               </div>
             )}
           </div>
@@ -78,6 +92,12 @@ function App() {
         <main>
           <Route path="/cart/:id?" component={CartScreen}></Route>
           <Route path="/product/:id" component={ProductScreen}></Route>
+          <Route path="/product/:id" component={ProductScreen} exact></Route>
+          <Route
+            path="/product/:id/edit"
+            component={ProductEditScreen}
+            exact
+          ></Route>
           <Route path="/signin" component={SignInScreen}></Route>
           <Route path="/register" component={RegisterScreen}></Route>
           <Route path="/shipping" component={ShippingAddressScreen}></Route>
