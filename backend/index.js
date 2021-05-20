@@ -1,13 +1,12 @@
-import express from "express";
-import mongoose from "mongoose";
-import dotenv from "dotenv";
-import productRouter from "./routers/productRouter.js";
-import userRouter from "./routers/userRouter.js";
-import orderRouter from "./routers/orderRouter.js";
+const express = require('express')
+const mongoose = require('mongoose');
+require('dotenv').config()
 
-dotenv.config();
+const productRouter = require("./routers/productRouter.js");
+const userRouter = require("./routers/userRouter.js")
+const orderRouter = require("./routers/orderRouter.js")
 
-const app = express();
+var app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/technogo", {
@@ -24,8 +23,8 @@ app.get("/", (req, res) => {
   res.send("Servidor corriendo.");
 });
 
-app.use((err, req, res) => {
-  res.status(500).send({ message: err.message });
+app.use((req, res) => {
+  res.sendStatus(500);
 });
 
 const port = process.env.port || 5000;

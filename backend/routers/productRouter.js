@@ -1,7 +1,8 @@
-import express from "express";
-import data from "../data.js";
-import expressAsyncHandler from "express-async-handler";
-import Product from "../models/productModel.js";
+const express = require('express')
+const expressAsyncHandler = require('express-async-handler')
+
+const data = require("../data.js");
+const Product = require("../models/productModel.js");
 
 const productRouter = express.Router();
 
@@ -34,4 +35,4 @@ productRouter.get(
   })
 );
 
-export default productRouter;
+module.exports = productRouter;
