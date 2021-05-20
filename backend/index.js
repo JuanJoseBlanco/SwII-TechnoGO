@@ -18,7 +18,6 @@ mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/technogo", {
 
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
-
 app.use('/api/orders', orderRouter);
 
 app.get("/", (req, res) => {
